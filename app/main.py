@@ -3,8 +3,7 @@ from .routes import router
 from .config import settings
 
 app = FastAPI(
-    title="Social Media Backend",
-    description="A simple social media backend with Neo4j Aura",
+    title="Social Media API (Neo4j + FastAPI)",
     version="1.0.0"
 )
 
@@ -13,7 +12,7 @@ app.include_router(router, prefix="/api/v1")
 
 @app.get("/")
 def read_root():
-    return {"message": "Social Media Backend API"}
+    return {"message": "Social Media API (Neo4j + FastAPI)"}
 
 @app.get("/health")
 def health_check():
